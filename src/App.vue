@@ -1,11 +1,15 @@
 <script>
 import TheHeader from "./components/TheHeader.vue"
 import TheFooter from "./components/TheFooter.vue"
+import TheMain from "./components/TheMain.vue"
+import Banner from "./components/Banner.vue"
 
 export default {
   components: {
     TheHeader,
-    TheFooter
+    TheFooter,
+    TheMain,
+    Banner
   },
   data() {
     return {}
@@ -17,11 +21,10 @@ export default {
 <template>
   <div class="container-fluid px-0">
     <div class="row">
-      <div class="col mx-auto">
+      <div class="col">
         <TheHeader></TheHeader>
-        <main>
-          <a href="#">Link ad una pagina</a>
-        </main>
+        <TheMain></TheMain>
+        <Banner></Banner>
         <TheFooter></TheFooter>
       </div>
     </div>
