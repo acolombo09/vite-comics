@@ -63,13 +63,17 @@ export default {
   </footer>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+
+@use "../styles/partials/variables" as *;
+
 footer {
   padding-top: 2rem;
   padding-bottom: 7rem;
   background-image: url();
   background-position: bottom;
   background-repeat: repeat-x;
+  background-color: $color-secondary;
 }
 a {
   text-decoration: none;

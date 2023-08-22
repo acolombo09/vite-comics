@@ -15,9 +15,9 @@ export default {
 </script>
 
 <template>
-  <div class="container-fluid">
+  <div class="container-fluid px-0">
     <div class="row">
-      <div class="col-md-9 mx-auto">
+      <div class="col mx-auto">
         <TheHeader></TheHeader>
         <main>
           <a href="#">Link ad una pagina</a>

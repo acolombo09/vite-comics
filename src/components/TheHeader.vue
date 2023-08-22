@@ -22,7 +22,10 @@ export default {
   </header>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+
+@use "../styles/partials/variables" as *;
+
 header {
   display: flex;
   flex-direction: row;
