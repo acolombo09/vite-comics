@@ -11,7 +11,7 @@ export default {
         <img src="../assets/img/dc-logo.png" alt="dc-logo-header">
         <ul class="nav nav-pills">
           <li class="nav-item"><a href="#" class="nav-link">CHARACTERS</a></li>
-          <li class="nav-item"><a href="#" class="nav-link active">COMICS</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">COMICS</a></li>
           <li class="nav-item"><a href="#" class="nav-link">MOVIES</a></li>
           <li class="nav-item"><a href="#" class="nav-link">TV</a></li>
           <li class="nav-item"><a href="#" class="nav-link">GAMES</a></li>
@@ -36,6 +36,32 @@ header img {
 
 header .nav-link {
   color: black;
+}
+
+li {
+  position: relative;
+
+}
+
+li::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2rem;
+  height: 5px;
+  width: 100%;
+  background-color: $color-primary;
+  scale: 0 1;
+  transition: scale 250ms;
+}
+
+li:hover::after{
+  scale: 1 1;
+}
+
+a:hover,
+a:focus-visible {
+  color: $color-primary;
 }
 
 </style>
