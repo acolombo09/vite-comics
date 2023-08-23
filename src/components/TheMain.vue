@@ -18,5 +18,9 @@ export default {
 
 @use "../styles/partials/variables" as *;
 
+main{
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
 
 </style>

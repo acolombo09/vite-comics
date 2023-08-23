@@ -32,9 +32,5 @@ export default {
 </template>
 
 <style>
-main{
-  background-image: url();
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
+
 </style>
