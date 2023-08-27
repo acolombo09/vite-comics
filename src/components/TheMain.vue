@@ -5,10 +5,10 @@ export default {
 </script>
 
 <template>
-  <main class="bg-black">
+  <main>
     <div class="row">
       <div class="col-md-9 d-flex justify-content-center align-items-center justify-content-between mx-auto px-0">
-        <h4 class="text-white mb-0">--&gt; Content Goes Here &lt;--</h4>
+        
       </div>
     </div>
   </main>
@@ -19,8 +19,12 @@ export default {
 @use "../styles/partials/variables" as *;
 
 main{
+  min-height: 500px;
   padding-top: 3rem;
   padding-bottom: 3rem;
+  background-image: url(../assets/img/jumbotron.jpg);
+  background-size: auto;
+  background-repeat: no-repeat;
 }
 
 </style>

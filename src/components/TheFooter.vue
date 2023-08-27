@@ -13,11 +13,11 @@ export default {
         ],
       ShopLinks:[
         { name: "Shop Dc"},
-        { name: "Shop Collectables" },
+        { name: "Shop Collectibles"},
         ],
       DCLinks:[
         { name: "Terms Of Use"},
-        { name: "Privacy Policy(New)" },
+        { name: "Privacy Policy(New)"},
         { name: "AdChoice"},
         { name: "Advertising"},
         { name: "Jobs"},
@@ -44,56 +44,35 @@ export default {
   <footer>
   <div class="container-fluid px-0 footer-upper">
     <div class="row mx-0">
-      <div class="col-md-9 d-flex justify-content-start align-items-center py-4 mx-auto">
+      <div class="col-md-9 d-flex justify-content-start align-items-center py-4 mx-auto overflow-hidden position-relative">
         <div class="col-md-4 d-flex justify-content-between px-0">
           <div class="row mx-0">
             <div class="col-4 px-0">
               <h6 class="title">DC COMICS</h6>
               <ul class="list-unstyled">
-                <li><a href="#">Characters</a></li>
-                <li><a href="#">Comics</a></li>
-                <li><a href="#">Movies</a></li>
-                <li><a href="#">TV</a></li>
-                <li><a href="#">Games</a></li>
-                <li><a href="#">Videos</a></li>
-                <li><a href="#">News</a></li>
+                <li v-for="link in DcComicsLinks"><a href="#">{{ link.name }}</a></li>
               </ul>
               <h6 class="title">SHOP</h6>
               <ul class="list-unstyled">
-                <li><a href="#">Shop DC</a></li>
-                <li><a href="#">Shop DC Collectibles</a></li>
+                <li v-for="link in ShopLinks"><a href="#">{{ link.name }}</a></li>
               </ul>
             </div>
             <div class="col-4 px-0">
               <h6 class="title">DC</h6>
               <ul class="list-unstyled">
-                <li><a href="#">Terms Of Use</a></li>
-                <li><a href="#">Privacy policy (New)</a></li>
-                <li><a href="#">Ad Choices</a></li>
-                <li><a href="#">Advertising</a></li>
-                <li><a href="#">Jobs</a></li>
-                <li><a href="#">Subscriptions</a></li>
-                <li><a href="#">Talent Workshops</a></li>
-                <li><a href="#">CPSC Certificates</a></li>
-                <li><a href="#">Ratings</a></li>
-                <li><a href="#">Shop Help</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li v-for="link in DCLinks"><a href="#">{{ link.name }}</a></li>
               </ul>
             </div>
             <div class="col-4 px-0">
               <h6 class="title">SITES</h6>
               <ul class="list-unstyled">
-                <li><a href="#">DC</a></li>
-                <li><a href="#">MAD Magazine</a></li>
-                <li><a href="#">DC Kids</a></li>
-                <li><a href="#">DC Universe</a></li>
-                <li><a href="#">DC Power Visa</a></li>
+                <li v-for="link in SitesLinks"><a href="#">{{ link.name }}</a></li>
               </ul>
             </div>
           </div> 
         </div>
-        <div class="col col-logo position-relative">
-          <img src="../assets/img/dc-logo-bg.png" alt="logo-dc-bg">
+        <div class="col-md-8 div-logo">
+          <img src="../assets/img/dc-logo-bg.png" class="logo-img" alt="logo-dc-bg">
         </div>
       </div>
     </div>
@@ -106,7 +85,7 @@ export default {
           <button type="button" class="btn btn-lg btn-outline-primary border-2 rounded-0 text-white">SIGN-UP NOW!</button>
         </div>
         <ul class="nav col-md-4 d-flex justify-content-end align-items-center list-unstyled">
-          <li class="ms-3"><a class="text-primary fs-5 fw-bold" href="#">FOLLOW US</a></li>
+          <li class="ms-3"><h3 class="text-primary fs-4 fw-bold" href="#">FOLLOW US</h3></li>
           <li class="ms-3"><a class="text-body-secondary" href="#"><img src="../assets/img/footer-facebook.png" alt="fb-footer"></a></li>
           <li class="ms-3"><a class="text-body-secondary" href="#"><img src="../assets/img/footer-twitter.png" alt="twitt-footer"></a></li>
           <li class="ms-3"><a class="text-body-secondary" href="#"><img src="../assets/img/footer-youtube.png" alt="yt-footer"></a></li>
@@ -129,14 +108,15 @@ a {
 }
 
 .footer-upper{
-  // min-height: 400px;
   background-image: url(../assets/img/footer-bg.jpg);
-  .col-logo{
+  background-repeat: no-repeat;
+  background-size: cover;
+  .div-logo{
     min-height: 400px;
     overflow: hidden;
   }
   .logo-img{
-    height: 130%;
+    height: 120%;
     position: absolute;
     top: 50%;
     right: 0;

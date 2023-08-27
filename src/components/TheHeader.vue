@@ -1,7 +1,22 @@
 <script>
 export default {
-
-}
+  data() {
+    return {
+      navLinks: [
+        { name: "CHARACTERS"},
+        { name: "COMICS"},
+        { name: "MOVIES"},
+        { name: "TV"},
+        { name: "GAMES"},
+        { name: "COLLECTIBLES"},
+        { name: "VIDEOS"},
+        { name: "FANS"},
+        { name: "NEWS"},
+        { name: "SHOP"},
+      ],
+    };
+  },
+};
 </script>
 
 <template>
@@ -10,16 +25,8 @@ export default {
       <div class="col-md-9 d-flex justify-content-center align-items-center justify-content-between mx-auto px-0">
         <img src="../assets/img/dc-logo.png" alt="dc-logo-header">
         <ul class="nav nav-pills">
-          <li class="nav-item"><a href="#" class="nav-link">CHARACTERS</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">COMICS</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">MOVIES</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">TV</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">GAMES</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">COLLECTIBLES</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">VIDEOS</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">FANS</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">NEWS</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">SHOP</a></li>
+          <li class="nav-item" v-for="link in navLinks">
+            <a href="#" class="nav-link">{{link.name}}</a></li>
         </ul>
       </div>
     </div>
