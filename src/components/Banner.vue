@@ -8,7 +8,7 @@ export default {
   <div class="bg-primary py-5">
     <div class="container px-0">
       <div class="row mx-auto justify-content-center">
-        <div class="col-md-10 d-flex justify-content-center align-items-center px-0">
+        <div class="col-md-10 d-flex justify-content-evenly px-0">
           <div class="col d-flex align-items-center">
             <img src="../assets/img/buy-comics-digital-comics.png" alt="digital-comics">
             <div>
